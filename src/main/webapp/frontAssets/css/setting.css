@@ -1,0 +1,11 @@
+.ui-page {
+    height: 100%;
+}
+
+.fixed-header {
+    text-align: center;
+}
+
+.ui-content {
+    top: 50px;
+}

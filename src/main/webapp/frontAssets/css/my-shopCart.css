@@ -1,0 +1,159 @@
+.fixed-header {
+    text-align: center;
+}
+
+.ui-content {
+    top: 50px;
+    padding: 0.5em 0 104px 0;
+}
+/*复选框按钮颜色*/
+.ui-btn.ui-checkbox-off:after{
+    background-color: rgba(0,0,0,0.5) !important;
+
+}
+.ui-controlgroup{
+    height: 7em;
+    background-color: #fff;
+}
+.ui-checkbox .ui-btn:hover{
+    background-color: #fff !important;
+}
+.options {
+    width: 100%;
+    height: 3em;
+    background-color: #fff;
+    position: fixed;
+    bottom: 57px;
+    right: 0;
+    margin: 0;
+    z-index: 99;
+}
+
+.options .ui-checkbox {
+    float: left;
+    margin: 0.9em 1em !important;
+    height: 1.2em;
+    width: 1.2em;
+    border-radius: 1em;
+}
+
+/*订单总价*/
+.options input {
+    height: 1.2em;
+    width: 1.2em;
+    margin: 0.9em 1em;
+    position: relative;
+}
+.options label.ui-btn {
+    position: relative;
+    border: none;
+    top: -0.4em;
+    padding: 1em 1.2em;
+    width: 1.4em !important;
+    height: 1.4em !important;
+}
+
+.options button {
+    position: absolute;
+    left: 65%;
+}
+
+.options .chooseAll-title{
+    display: block;
+    float: left;
+    height: 1em;
+    width: 2em;
+    margin: 1em 0 1em 0.5em;
+}
+.options .total-price{
+    color: #fe4070;
+}
+
+.options .shopCartInfo{
+    float: left;
+    margin: 0.5em;
+}
+
+.options .shopCartInfo .price,
+.options .shopCartInfo .num{
+    height: 1em;
+}
+
+
+.ui-checkbox .ui-btn {
+    background-color: #fff;
+    font-weight: 400;
+}
+
+#submitBtn {
+    width: 30%;
+    height: 2.5em;
+    line-height: 1.25em;
+    border-radius: 8em !important;
+    margin: 0.25em 0;
+    background-color: #fe4070;
+    color: #fff;
+    border: 0;
+    text-shadow: none;
+    font-weight: 400 !important;
+}
+
+#submitBtn {
+    background-color: #fe4070;
+}
+
+.shop-cart {
+    display: flex;
+    display: -webkit-flex;
+    padding: 0.5em;
+    justify-content: flex-start;
+}
+
+fieldset label.ui-btn{
+    margin: 0 !important;
+    border: 0;
+}
+
+.shop-cart img {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+.shop-cart>div {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 10px;
+}
+.ui-controlgroup .ui-checkbox{
+    width: 80%;
+    height: 7em;
+    float: left;
+}
+.ui-controlgroup .del-icon{
+    height: 1em;
+    float: right;
+    margin: 2em 1em;
+    font-size: 1.2em;
+}
+
+.shop-cart .icon-container{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1em;
+    font-size: 1.2em;
+}
+
+.ui-btn.ui-btn.ui-checkbox-on:after,
+.ui-btn.ui-btn.ui-checkbox-off:after {
+    height: 1.3em;
+    width: 1.3em;
+    border-radius: 1em;
+}
+
+.ui-btn.ui-checkbox-on:after {
+    background-color: #fe4070;
+}

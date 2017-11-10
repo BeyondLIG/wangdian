@@ -1,0 +1,168 @@
+.order-detail {
+    background-color: #eee;
+}
+
+.fixed-header {
+    text-align: center;
+}
+
+.ui-content {
+    top: 50px;
+    padding-top: 0.5em;
+}
+
+.order-status {
+    background-color: #fe4070;
+    height: 3em;
+    line-height: 3em;
+    color: #fff;
+    text-shadow: none;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.delivery-num {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.order-address {
+    background-color: #fff;
+    padding: 10px;
+    line-height: 25px;
+}
+
+.name-phone {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+
+.order-info {
+    /*
+    display: flex;
+    display: -webkit-flex;
+    */
+    height: 7em;
+    padding: 0.5em 0.5em;
+    background-color: #F6F6F6;
+    border-top: 1px solid #fff;
+}
+
+.order-info img {
+    width: 6em;
+    height: 6em;
+    margin-right: 0.5em;
+    float: left;
+}
+
+/*
+.order-info>div {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+*/
+
+.order-info .name {
+    color: #000;
+    font-weight: bolder;
+    font-size: 1em;
+    line-height: 1em;
+    max-height: 40px;
+    overflow: hidden;
+    padding: 0.5em 0 1em 0;
+}
+
+.order-info .order-desc {
+    float: left;
+    height: 6em;
+    width: 15em;
+}
+
+.order-info .parameter {
+    color: #666;
+    /*
+    max-height: 40px；
+    */
+}
+
+.order-info .order-num,
+.order-info .order-price {
+    display: inline-block;
+    margin: 1em 1em 0 0;
+}
+.order-more{
+    width: 100%;
+    background-color: #fff;
+    padding: 1em 0.5em;
+}
+.order-more .text-area{
+    line-height: 1.5em;
+    word-wrap: break-word;
+    word-break: break-all;
+    width: 80%;
+}
+.order-more div{
+    margin: 0.5em 0;
+}
+
+.price {
+    text-align: left;
+    line-height: 30px;
+    padding-right: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.price .price-inner{
+    width: 10em;
+    height: 4em;
+    float: right;
+}
+.price-inner .post-fee{
+    font-size: 0.9em;
+}
+.price-inner .total-fee{
+    font-size: 1em;
+}
+
+.price span {
+    color: #fe4070;
+    font-weight: bolder;
+}
+
+.price span:before {
+    content: '￥';
+}
+
+.order-options {
+    position: fixed;
+    bottom: 0;
+    /*border-top: 1px solid #ddd;*/
+    height: 60px;
+    width: 100%;
+    padding: 10px 0;
+    justify-content: flex-end;
+    background-color: #fff;
+    text-align: center;
+}
+
+.order-options a {
+    text-decoration: none;
+}
+
+.order-options button {
+    background-color: #fe4070;
+    color: #fff;
+    border: none;
+    border-radius: 8em;
+    padding: 0.5em;
+    width: 6em;
+    margin: 0 2em;
+}

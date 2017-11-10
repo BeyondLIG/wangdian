@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		                    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		                    http://www.springframework.org/schema/context
+		                    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		                    http://www.springframework.org/schema/tx
+		                    http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		                    http://www.springframework.org/schema/aop
+		                    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+
+    <!-- 自动扫描包并自动装配bean Spring根容器负责所有其他非controller的Bean的注册-->
+    <context:component-scan base-package="cn.wangdian">
+        <context:exclude-filter type="annotation"
+                                expression="org.springframework.stereotype.Controller" />
+    </context:component-scan>
+
+    <bean id="mailService"
+          class="cn.wangdian.Service.MailService">
+        <property name="host">
+            <value>${email.host}</value>
+        </property>
+        <property name="port">
+            <value>${email.port}</value>
+        </property>
+        <property name="user">
+            <value>${email.user}</value>
+        </property>
+        <property name="password">
+            <value>${email.password}</value>
+        </property>
+    </bean>
+
+    <!-- 引用参数文件-->
+    <context:property-placeholder location="classpath:config.properties"/>
+
+    <!-- 配置dataSource数据源池,这里使用阿里巴巴的数据源池-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="initialSize" value="${jdbc.pool.initialSize}"/>
+        <property name="maxActive" value="${jdbc.pool.maxActive}"/>
+    </bean>
+
+    <!-- 配置jpa的entityManagerFactory-->
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="persistenceXmlLocation" value="classpath:META-INF/persistence.xml"/>
+        <property name="loadTimeWeaver">
+            <bean class="org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver"/>
+        </property>
+    </bean>
+
+    <!-- 配置jpa的transcation事务管理器-->
+    <bean id="transcationManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+
+    <!-- 启用事务注解器-->
+    <tx:annotation-driven transaction-manager="transcationManager"/>
+
+    <!-- 自动扫描并注入spring data jpa
+    把继承了 JpaRepository 接口的 interface 实例化为一个 Spring bean-->
+    <jpa:repositories base-package="cn.wangdian"
+                      entity-manager-factory-ref="entityManagerFactory"
+                      transaction-manager-ref="transcationManager"/>
+
+</beans>

@@ -1,0 +1,87 @@
+
+.my-slider a{
+    color: #333;
+    font-weight: lighter;
+    text-decoration: none;
+}
+.my-slider a:focus,.my-slider a:hover,.my-slider a:visited{
+    color: #333;
+    font-weight: lighter;
+}
+
+.unslider{
+    background-color: #fff;
+}
+.unslider-nav{
+    border-bottom: 1px solid #eee;
+}
+.ui-grid-d{
+    text-align: center;
+}
+.ui-grid-d>div{
+    padding: 10px;
+    max-height: 100px;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.recommendation{
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.recommendation .title{
+    font-size: 18px;
+    border-left: 4px solid #fe4070;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.commodities{
+    background-color: #fff;
+}
+
+.commodities .ui-grid-solo{
+    text-decoration: none;
+    color: #333;
+    font-weight: lighter;
+}
+.commodities .ui-block-a{
+    margin-bottom: 10px;
+}
+
+.commodities a:visited,.flash-sale a:focus{
+    color: #333;
+}
+
+.ui-grid-solo img {
+    width: 100%;
+}
+.commodities .ui-block-a{
+    border: 1px solid #eee;
+}
+.commodities>div{
+    border: 1px solid #ddd;
+    margin: 5px 0;
+    text-align: center;
+    padding: 10px;
+}
+
+.commodity-info{
+    text-align: center;
+}
+.commodity-info .price span:before{
+    content: '￥';
+}
+.commodity-info .price span:nth-of-type(1){
+    color: #333;
+    font-weight: bold;
+}
+.not-found{
+    text-align: center;
+    line-height: 30px;
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 扫描包 只对@Controller进行扫描就可，作为一个控制器，其他的事情不做,-->
+    <!--全部扫描一般会导致一个常见的错误，那就是事务不起作用，补救的方法是添加use-default-filters=”false”-->
+    <context:component-scan base-package="cn.wangdian.Controller">
+        <context:include-filter type="regex" expression=".*Controller"/>
+    </context:component-scan>
+
+    <!-- mvc适配器和映射器-->
+    <mvc:annotation-driven/>
+
+    <bean id="jsonView" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!--这个的作用是什么-->
+    <!--servlet在找页面时，走的是dispatcherServlet路线。找不到的时候会报404
+     加上这个默认的servlet时候，servlet在找不到的时候会去找静态的内容。-->
+    <mvc:default-servlet-handler/>
+
+    <!-- SpringMVC上传文件时，需要配置MultipartResolver处理器 -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="utf-8"/>
+        <property name="maxUploadSize" value="10485760000"/>
+        <property name="maxInMemorySize" value="40960"/>
+    </bean>
+
+</beans>

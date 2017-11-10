@@ -1,0 +1,98 @@
+/*提示信息相关*/
+
+.ui-popup-container {
+    width: 80%;
+    border: none;
+    padding: 0;
+    text-align: center;
+}
+
+.ui-popup-container .ui-content {
+    top: 0 !important;
+    padding: 0 !important;
+}
+
+.ui-popup-container .origin {
+    width: 80%;
+    margin: 1em auto;
+}
+
+.ui-popup-container .ui-btn {
+    width: 50%;
+    margin: 5% auto;
+    text-align: center;
+}
+
+.alert-info {
+    padding: 2em;
+    text-align: center;
+}
+
+#alertInfo .ui-header,
+#email .ui-header,
+#phone .ui-header {
+    text-align: center;
+    height: 2em;
+    line-height: 2em;
+    text-shadow: none;
+    font-size: 1.2em;
+    font-weight: 300 !important;
+    border: 0;
+}
+
+.ui-field-contain {
+    padding: 0;
+    border: 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.ui-field-contain .ui-input-text input{
+    border: 1px solid #ccc !important;    
+}
+/*
+.ui-field-contain input,
+.ui-field-contain .ui-focus {
+    border: 1px solid #eee !important;
+}
+*/
+.ui-popup-container .ui-btn {
+    background-color: #fe4070 !important;
+    text-shadow: none;
+    font-weight: 300;
+    color: #fff !important;
+    font-size: 1em;
+    padding: 0.5em;
+    width: 6em;
+    border-radius: 2em;
+}
+
+.ui-body-inherit {
+    border: 1px solid #fff !important;
+}
+
+
+#alertInfo a.ui-btn{
+    border: 0 !important;
+    widht: 5em;
+    display: inline-block;
+    margin: 1em;
+}
+
+.validCode-parent {
+    width: 6.5em;
+    float: left;
+}
+
+#send-code {
+    background-color: #fe4070;
+    color: #fff;
+    border: 1px solid #fe4070;
+    border-radius: 8em;
+    padding: 0.8em;
+    margin-left: 1em;
+    font-size: 0.8em;
+    font-weight: 300;
+    width: 8em;
+    float: left;
+}

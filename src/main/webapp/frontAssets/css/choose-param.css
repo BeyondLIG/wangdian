@@ -1,0 +1,133 @@
+.ui-page{
+    background-color: #fff;
+}
+.fixed-header{
+    text-align: center;
+}
+.ui-content{
+    top: 50px;
+    padding: 0.5em 0 5em 0;
+}
+
+.ui-btn.ui-radio-on:after{
+    border-color: #fe4070 !important;
+}
+
+.ui-controlgroup-label{
+    margin: 0.5em 0;
+}
+
+#confirmBtn{
+    position: fixed;
+    width: 100%;
+    height: 3em;
+    line-height: 1.5em;
+    bottom: 0;
+    margin: 0;
+    z-index: 99;
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    text-shadow: none;
+    font-weight: 300 !important;
+    cursor:not-allowed;
+}
+
+.available{
+    background-color: #fe4070 !important;
+    cursor: pointer !important;
+}
+
+.available:focus{
+    background-color: #fe4070 !important;
+    color: #fff;
+    text-shadow: none;
+    border: none;
+}
+
+#confirmBtn:focus{
+    background-color: #ccc;
+    color: #fff;
+    text-shadow: none;
+    border: none;
+}
+.chosen-info{
+    padding: 1em;
+    background-color: #eee;
+    margin-bottom: 1em;
+}
+.chosen-info .price,
+.chosen-info .total-price,
+.chosen-info .name{
+    font-weight: bolder;
+}
+
+.total-price span,
+.name span,
+.price span{
+    font-weight: lighter;
+    color: #fe4070;
+    line-height: 30px;
+}
+
+.parameter>span{
+    font-weight: bolder;
+    margin: 0;
+    height: 30px;
+    line-height: 30px;
+}
+.chosen-parameter{
+    display: inline;
+}
+
+.chosen-parameter span{
+    color: #fe4070;
+    line-height: 30px;
+}
+.chosen-parameter span:nth-child(n+2):before{
+    content: "，";
+}
+
+.ui-controlgroup,
+.ui-field-contain{
+    padding: 0 1em !important;
+}
+
+.buy-count{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: flex-start;
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+    padding: 1em 1em;
+}
+
+.buy-count .ui-input-text{
+    padding: 0 !important;
+    border: none;
+    box-shadow: none;
+    width: 50px;
+    font-weight: bolder !important;
+    text-align: center !important;
+}
+
+.buy-count button{
+    width: 4em;
+    height: 2em;
+    padding: 0 !important;
+    margin: 0.5em 0.8em;
+}
+
+.buy-count span{
+    width: 50px;
+    text-align: center;
+    font-weight: bolder;
+}
+.no-address{
+    background-color: #eee;
+    padding: 0.8em;
+}
+.no-address a{
+    text-decoration: none;
+}

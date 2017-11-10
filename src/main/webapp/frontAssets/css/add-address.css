@@ -1,0 +1,67 @@
+.ui-page{
+    height: 100%;
+    background-color: #fff;
+}
+.fixed-header{
+    text-align: center;
+}
+.ui-content{
+    top: 50px;
+    padding: 0.5em 0;
+}
+
+form .ui-input-text,
+form .ui-select{
+    margin: 1.5em 0;
+    border-radius: 8em;
+    border: 1px solid #eee;
+    padding: 0 2%;
+    box-shadow: none !important;
+}
+
+#city .ui-btn{
+    height: 4em;
+}
+#city .ui-btn,
+.current-address{
+    line-height: 2em;
+    margin-left: 0;
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid #eee;
+}
+
+#city select,
+.current-address{
+    width: 100%;
+    color: #333;
+    font-weight: 400;
+    padding: 1em 1em;
+}
+
+textarea.ui-input-text{
+    font-weight: 400 !important;
+    padding: 1em 2em !important;
+    margin-top: 20px;
+    height: 100px !important;
+    border-radius: 0 !important;
+    border: 1px solid #aaa !important;
+}
+
+#submit{
+    width: 10em;
+    margin: 2em auto 1em auto;
+    padding: 0.5em;
+    background-color: #fe4070 !important;
+    border-radius: 8em;
+    color: #fff !important;
+    font-weight: 400;
+}
+.ui-btn:focus{
+    color: #333 !important;
+    background-color: #fff !important;
+}
+.ui-input-text:focus{
+    box-shadow: none !important;
+}
+

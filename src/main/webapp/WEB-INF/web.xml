@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:applicationContext.xml</param-value>
+  </context-param>
+
+  <!--<listener>-->
+    <!--<description>spring listener</description>-->
+    <!--<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>-->
+  <!--</listener>-->
+
+  <!--自定义 ContextLoaderListener-->
+  <listener>
+    <listener-class>cn.wangdian.listener.ApplicationContextListener</listener-class>
+  </listener>
+
+  <filter>
+    <filter-name>encoding</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+    <init-param>
+      <param-name>forceEncoding</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>encoding</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <!--设置session的失效时间为30分钟-->
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+
+  <!--登录过滤器，防止恶意用户撞库-->
+  <filter>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>cn.wangdian.filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/admin/admin/*</url-pattern>
+    <url-pattern>/admin/advert/*</url-pattern>
+    <url-pattern>/admin/profit/*</url-pattern>
+    <url-pattern>/admin/firstPhoto/*</url-pattern>
+    <url-pattern>/admin/orders/*</url-pattern>
+    <url-pattern>/admin/shop/*</url-pattern>
+    <url-pattern>/admin/shopKeeper/*</url-pattern>
+    <url-pattern>/admin/shunShop/*</url-pattern>
+    <url-pattern>/admin/user/*</url-pattern>
+    <url-pattern>/admin/yuMing/*</url-pattern>
+  </filter-mapping>
+
+  <!--admin 超级管理员过滤器-->
+  <filter>
+    <filter-name>AdminFilter</filter-name>
+    <filter-class>cn.wangdian.filter.AdminFilter</filter-class>
+  </filter>
+  <!--TODO 这里还需要加上 /admin/shopkeeper-->
+  <filter-mapping>
+    <filter-name>AdminFilter</filter-name>
+    <url-pattern>/admin/admin/*</url-pattern>
+    <url-pattern>/admin/profit/*</url-pattern>
+    <url-pattern>/admin/firstPhoto/*</url-pattern>
+    <url-pattern>/admin/orders/*</url-pattern>
+    <url-pattern>/admin/profit/*</url-pattern>
+    <url-pattern>/admin/shop/*</url-pattern>
+    <url-pattern>/admin/shunShop/*</url-pattern>
+    <url-pattern>/admin/user</url-pattern>
+    <url-pattern>/admin/shareBenefit/*</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>UserFilter</filter-name>
+    <filter-class>cn.wangdian.filter.UserFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>UserFilter</filter-name>
+    <url-pattern>/user/*</url-pattern>
+  </filter-mapping>
+
+  <servlet>
+    <servlet-name>springMvc</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:springmvc.xml</param-value>
+    </init-param>
+    <!--数值小的 Servlet 会比数值大的 Servlet 先加载-->
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>springMvc</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+  <listener>
+    <listener-class>
+      org.springframework.web.context.request.RequestContextListener
+    </listener-class>
+  </listener>
+
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

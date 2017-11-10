@@ -1,0 +1,80 @@
+.ui-page {
+    background-color: #fff;
+    height: 100%;
+}
+
+.fixed-header {
+    text-align: center;
+}
+
+/*
+#registerForm,
+#referee,
+#alipay {
+    display: none;
+}
+*/
+
+.ui-content {
+    position: relative;
+    padding-bottom: 0;
+    top: 60px;
+    bottom: 0;
+    height: 90%;
+}
+
+.ui-field-contain {
+    width: 14em;
+}
+
+.type-area {
+    position: relative;
+    top: 35%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 1em 0;
+}
+
+.type-area #type-title {
+    font-size: 1.2em;
+    font-weight: 400;
+    padding: 1em 0;
+}
+
+#type-btn button {
+    width: 40%;
+    margin: 1em auto;
+    color: #fff;
+    font-weight: 300;
+    border-radius: 8em;
+    background-color: #fe4070;
+}
+
+.validCode-parent {
+    width: 6.5em;
+    float: left;
+}
+
+#send-code {
+    background-color: #fe4070;
+    color: #fff;
+    border: 1px solid #fe4070;
+    border-radius: 8em;
+    padding: 0.8em;
+    margin-left: 1em;
+    font-size: 0.8em;
+    font-weight: 300;
+    width: 8em;
+    float: left;
+}
+
+#register,
+#changePass {
+    font-weight: 300;
+    width: 10em;
+    margin: 2em auto;
+    background-color: #fe4070;
+    color: #fff;
+    border: 1px solid #fe4070;
+    border-radius: 8em;
+}

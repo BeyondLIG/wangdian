@@ -1,0 +1,8 @@
+.fixed-header{
+    text-align: center;
+}
+
+.ui-content{
+    top: 50px;
+    padding: 0.5em 0;
+}

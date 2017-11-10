@@ -1,0 +1,185 @@
+.ui-page {
+    padding: 0 0;
+    bottom: 50px;
+}
+
+.fixed-header {
+    text-align: center;
+}
+
+.ui-content {
+    top: 50px;
+    padding: 0.5em 0 3.5em 0;
+}
+
+.ui-btn:focus,
+.ui-btn-active{
+    background-color: #fe4070 !important;
+}
+.user-options {
+    display: flex;
+    display: -webkit-flex;
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    z-index: 99;
+    height: 3em;
+    width: 100%;
+}
+
+.user-options a {
+    display: inline-block;
+    margin: 0;
+    width: 50%;
+    height: 3em;
+    line-height: 1.5em;
+    background-color: #fe4070 !important;
+    color: #fff !important;
+    border: none;
+    text-shadow: none !important;
+    font-weight: 300 !important;
+}
+
+.user-options a:focus {
+    background-color: #fe4070;
+    color: #fff;
+    text-shadow: none !important;
+    border: none;
+}
+
+#buyBtn {
+    background-color: #FF0040 !important;
+}
+
+#buyBtn:focus {
+    color: #fff;
+    text-shadow: none !important;
+    border: none;
+}
+
+.commodity-info {
+    margin-top: 0.4em;
+    background-color: #fff;
+    text-align: left;
+    padding: 0.5em 1.5em;
+}
+
+.commodity-info .commodity-name {
+    margin: 0;
+    /*
+    width: 80%;
+    */
+    font-size: 1.2em;
+}
+
+.commodity-info .price {
+    font-weight: 700;
+    height: 2em;
+    color: #fe4070;
+}
+
+.commodity-info .current-price {
+    font-size: 1.2em;
+    float: left;
+    margin: 0.5em 0 0 0;
+}
+
+.commodity-info .past-price {
+    position: relative;
+    top: 1em;
+    left: 0.3em;    
+    width: auto;
+    float: left;
+    font-size: 0.8em;
+    color: #979797;
+}
+
+.commodity-info .line {
+    position: absolute;
+    top: 0.5em;
+    width: 105%;
+    height: 1px;
+    background-color: #979797;
+}
+
+.commodity-info .shopDesc{
+    margin: 0.5em 0;
+    line-height: 1.5em;
+}
+
+.commodity-info p {
+    width: 100%;
+}
+
+
+/*图文详情*/
+
+.pic-detail .title {
+    font-size: 18px;
+    border-left: 4px solid #fe4070;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 0;
+}
+
+.pic-detail img {
+    width: 100%;
+    display: block;
+}
+
+.countdown-outer{
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 0.5em;
+    background-color: #fff;
+}
+.countdown {
+    float: right;
+    display: flex;
+    display: -webkit-flex;
+    background-color: #fff;
+    flex-wrap: nowrap;
+    padding: 1%;
+    justify-content: flex-start;
+    margin-bottom: -5px;
+}
+
+.countdown>ul {
+    padding: 0;
+    margin: 0 0 0 10px;
+    list-style-type: none;
+    display: flex;
+    display: -webkit-flex;
+}
+
+.countdown p {
+    margin: 0;
+}
+
+.countdown li:nth-of-type(odd) {
+    color: #fe4070;
+    text-shadow: none !important;
+}
+
+.postage span {
+    color: #fe4070;
+    font-size: 0.8em;
+}
+
+.prompt-info {
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    text-shadow: none;
+    position: fixed;
+    bottom: 50px;
+    z-index: 999;
+}
+
+.prompt-info span {
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+}

@@ -1,0 +1,92 @@
+.ui-page{
+    background-color: #eee;
+}
+.fixed-header{
+    text-align: center;    
+}
+.ui-content{
+    top: 50px;
+    padding: 0.5em 0;
+}
+
+.ui-field-contain {
+    padding: 0;
+    border: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#addAddressBtn{
+    position: fixed;
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    z-index: 99;
+    background-color: #fe4070;
+    color: #fff !important;
+    border: none;
+    text-shadow: none;
+    font-weight: 300 !important;
+}
+
+#addAddressBtn:focus{
+    background-color: #fe4070;
+    color: #fff;
+    text-shadow: none;
+    border: none;
+}
+
+.address{
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.address:nth-last-child(1){
+    margin-bottom: 55px;
+}
+
+.address-info{
+    padding: 1.5em 1.5em;
+}
+
+.address-info .address-detail{
+    display: block;
+    margin: 1em 0 0 0;
+    line-height: 1.5em;
+}
+
+.address-info .name-phone{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+.address-options{
+    text-align: center;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+}
+
+.address-options a{
+    color: #333;
+    text-shadow: none;
+}
+.address-options a:hover{
+    background-color: #eee !important;
+}
+.address-options .ui-btn-active{
+    color: #333 !important;
+    text-shadow: none !important;
+}
+.address-options .ui-block-a{
+    visibility: hidden;
+}
+.address-options .ui-btn{
+    margin: 0;
+    border: none;
+    background-color: #fff;
+}
+.address-options .ui-btn:visited{
+    background-color: #fff;
+}

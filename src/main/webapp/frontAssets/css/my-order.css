@@ -1,0 +1,132 @@
+.fixed-header {
+    color: #000 !important;
+    line-height: 50px;
+    text-align: center;
+}
+.fixed-header .ui-btn-left{
+    font-size: 1em !important;
+}
+.fixed-header .icon{
+    height: 50px;
+}
+.ui-content{
+    top: 50px;
+    padding: 1em 0;
+}
+
+
+.fixed-header .orders a {
+    text-shadow: none !important;
+}
+
+.ui-grid-solo {
+    text-decoration: none;
+    color: #333 !important;
+    font-size: 0.8em;
+}
+
+.ui-block-a {
+    padding: 1em 1em;
+    background-color: #fff !important;
+    border-bottom: 1px solid #ddd;
+    font-weight: 400;
+}
+
+.order-status,
+.order-time {
+    padding: 0.5em 0;
+    line-height: 20px;
+}
+
+.order-status span {
+    color: #fe4070;
+}
+
+.order-items .order-info:nth-of-type(1) {
+    border-top: none;
+}
+
+.order-info {
+    display: flex;
+    display: -webkit-flex;
+    padding: 5px 10px;
+    background-color: #F6F6F6;
+    border-top: 1px solid #fff;
+}
+
+.order-info img {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+/*
+.order-info>div {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+*/
+.order-info .name {
+    color: #000;
+    font-weight: bolder;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    max-height: 40px;
+    overflow: hidden;
+    padding: 0.5em 0;
+}
+
+.order-info .parameter {
+    color: #666;
+    max-height: 30px;
+    overflow: hidden;
+}
+
+.order-info .order-num,
+.order-info .order-price{
+    display: inline-block;
+    margin: 1em 3em 0 0;
+}
+
+/*
+.price {
+    text-align: right;
+    line-height: 30px;
+}
+
+.price span {
+    color: #8800FF;
+    font-weight: bolder;
+    margin-left: 10px;
+}
+
+.price span:before {
+    content: '￥';
+}
+*/
+.total-price {
+    text-align: right;
+    line-height: 30px;
+}
+
+.total-price span {
+    color: #fe4070;
+}
+
+.total-price span:before {
+    content: '￥';
+}
+
+.not-found {
+    margin: 3em 0;
+    text-align: center;
+    line-height: 30px;
+}
+.not-found .icon{
+    font-size: 6em;
+}
+.not-found .no-title{
+    font-size: 1.2em;
+    margin: 2em 0;
+}

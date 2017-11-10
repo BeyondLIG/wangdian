@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+             version="1.0">
+
+<persistence-unit name="lab" transaction-type="RESOURCE_LOCAL">
+    <!-- 选择jap持久化实现厂商，这里以hibernate为例-->
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <properties>
+        <!-- 数据库语言-->
+        <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+        <!-- 数据库表自动更新-->
+        <property name="hibernate.hbm2ddl.auto" value="update"/>
+        <!-- 数据库显示sql语句操作-->
+        <property name="hibernate.show_sql" value="false"/>
+        <!-- 数据库表sql格式化显示-->
+        <property name="hibernate.format_sql" value="false"/>
+
+        <property name="hibernate.jdbc.batch_size" value="10"/>
+
+        <property name="hibernate.jdbc.fetch_size" value="18"/>
+        <!-- 数据库表最大连接数-->
+        <property name="hibernate.max_fetch_depth" value="8"/>
+        <!-- 关闭Load方法的延迟加载-->
+        <property name="hibernate.enable_lazy_load_no_trans" value="true"/>
+        <!--关联重复问题-->
+        <property name="hibernate.event.merge.entity_copy_observer" value="allow"/>
+    </properties>
+</persistence-unit>
+
+
+
+</persistence>

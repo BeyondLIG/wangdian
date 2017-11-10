@@ -1,0 +1,72 @@
+.ui-page{
+    background-color: #fff;
+}
+.fixed-header{
+    text-align: center;
+}
+
+.ui-content .logo{
+    text-align: center;
+}
+.ui-content .logo img{
+    width: 5em;
+}
+
+form {
+    border: 0;
+    padding: 10px;
+}
+
+form .ui-field-contain .ui-input-text{
+    height: 2.5em;
+    line-height: 1.25em;
+    box-shadow: none !important; 
+    width: 15em;
+    margin: 2em auto;
+    font-weight: 300 !important;
+}
+
+form .ui-btn {
+    width: 6em;
+    height: 2.5em;
+    line-height: 1.25em;
+    border-radius: 2em !important;    
+    margin: 1em auto;
+    padding: 0.5em 0.2em;
+    font-weight: 300 !important;
+    background-color: #fe4070 !important;
+    color: #fff !important;
+    text-shadow: none !important;
+    text-align: center;
+    /*统一使用微软雅黑字体*/
+}
+
+form .ui-field-contain {
+    border: 0;
+}
+
+form .ui-focus {
+    box-shadow: none !important;
+}
+
+.product .ui-btn:focus {
+    background-color: #fe4070;
+    text-shadow: none;
+    color: #fff;
+}
+
+.register-forgetpwd {
+    position: relative;
+    transform: translateX(0.5em);
+    width: 14em;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.register-forgetpwd a {
+    font-size: 1em;
+    margin: 0 1em;
+    text-decoration: none;
+    font-weight: 400;
+    color: #fe4070 !important;
+}

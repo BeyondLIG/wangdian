@@ -1,0 +1,588 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-shadow: none !important;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none !important;
+    color: #000 !important;
+    text-shadow: none !important;
+}
+
+a:visited {
+    text-decoration: none !important;
+    color: #000 !important;
+    text-shadow: none !important;
+}
+
+
+/*矢量图标*/
+
+.icon {
+    /* 通过设置 font-size 来改变图标大小 */
+    width: 1em;
+    height: 1em;
+    /* 图标和文字相邻时，垂直对齐 */
+    vertical-align: -0.15em;
+    /* 通过设置 color 来改变 SVG 的颜色/fill */
+    fill: currentColor;
+    /* path 和 stroke 溢出 viewBox 部分在 IE 下会显示
+             normalize.css 中也包含这行 */
+    overflow: hidden;
+}
+
+.ui-page {
+    padding: 0;
+    background-color: #F5F5F5;
+    font-family: Arial, helvetica, "微软雅黑", "Microsoft Yahei", sans-serif !important;
+    font-weight: 400 !important;
+    overflow: visible !important;
+    /*统一使用微软雅黑字体*/
+}
+
+.ui-shadow {
+    box-shadow: none !important;
+}
+
+.ui-content {
+    position: relative;
+    top: 89px;
+    padding: 0 0 58px 0;
+}
+
+.ui-btn-active {
+    color: #000 !important;
+    background-color: #fff !important;
+    text-shadow: none !important;
+    border-color: #eee !important;
+    box-shadow: none !important;
+}
+
+.ui-focus {
+    box-shadow: none !important;
+}
+
+.ui-btn:focus {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    font-weight: 300 !important;
+    color: #fff!important;
+    background-color: #fe4070 !important;
+}
+
+.ui-input-text {
+    box-shadow: none;
+    border: 1px solid #aaa !important;
+    border-radius: 8em;
+}
+
+.ui-input-text input {
+    padding-left: 1.2em;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.fixed-header {
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    height: 50px;
+    width: 100%;
+    background-color: #fff !important;
+    border: 0;
+    font-size: 1.2em;
+    font-weight: 400;
+    box-shadow: 0 1px 2px #aaa;
+}
+
+.fixed-header #logo {
+    position: relative;
+    top: 23%;
+    transform: translateY(-50%);
+    width: 4em;
+    margin: 0 0.2em 0 0.5em;
+    font-size: 1.2em;
+    line-height: 100%;
+    float: left;
+    text-align: center;
+}
+
+.fixed-header .icon-container {
+    position: absolute;
+    left: 0.5em;
+    height: 100%;
+    width: auto;
+    display: inline-block;
+}
+
+
+/*返回按钮*/
+
+.fixed-header .header-title {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 50px;
+    text-align: center;
+    font-size: 1em;
+}
+
+.fixed-header .icon {
+    position: relative;
+    top: 25px;
+    height: 100%;
+    transform: translateY(-50%);
+    color: #000 !important;
+    font-size: 1.5em !important;
+}
+
+.fixed-header .search-box .icon {
+    position: relative;
+    top: 50%;
+    left: -0.6em;
+    transform: translateY(-50%);
+    color: #000;
+    font-size: 1.2em !important;
+    float: right;
+}
+
+.fixed-header .search-box .ui-input-text {
+    height: 30px;
+    margin: 0;
+    font-size: 0.8em;
+    font-weight: 100;
+    color: #9b9b9b;
+    border-radius: 15px;
+    background-color: #F4F4F4;
+    border: 1px solid #eee !important;
+}
+
+.fixed-header input {
+    position: relative;
+    min-height: 30px;
+    height: 30px;
+    width: 80%;
+    line-height: 30px;
+    padding: 0 0 0 1em;
+    margin: 0;
+    text-shadow: none !important;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.fixed-header .search-box {
+    position: relative;
+    float: left;
+    z-index: 999;
+    height: 30px;
+    width: 60%;
+    margin: 5px auto 0 4px;
+    padding: 0;
+    border-radius: 15px;
+}
+
+.classify-bar {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.classify-bar .move-bar {
+    position: relative;
+    transform: translateX(0);
+    width: 150%;
+    height: 50px;
+    top: 0;
+    overflow: hidden;
+    /*
+    border-bottom: 1px solid rgba(155, 155, 155, 0.3);
+    */
+}
+
+.classify-bar ul {
+    width: 100%;
+    height: 50px;
+    padding: 10px 0;
+}
+
+.classify-bar .classify {
+    position: relative;
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    margin: 0.3em 0.5em 0 0.5em;
+    padding-bottom: 0.4em;
+    width: auto;
+}
+
+.classify-bar .classify span {
+    font-size: 0.8em;
+    font-weight: 300 !important;
+}
+
+.classify-bar .choose-line {
+    background-color: #fe4070;
+    height: 0.15rem;
+    border-radius: 0.125rem 0.125rem 0 0;
+    display: block;
+    position: absolute;
+    bottom: 0.1em;
+    width: 100%;
+}
+
+.classify-bar .choose-line:not(#first) {
+    display: none;
+}
+
+.product-items .product {
+    height: auto;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.product-items .product img {
+    width: 100%;
+    max-height: 300px;
+}
+
+.product .product-desc{
+    overflow: hidden;
+}
+
+.product .name {
+    float: left;
+    font-weight: 400;
+    font-size: 1em;
+    margin: 0.5em 1em;
+}
+.product .product-price{
+    float: right;
+    font-weight: 400;
+    font-size: 1em;
+    margin: 0.5em 1.2em;
+}
+.product .current-price {
+    color: #fe4070;
+    font-size: 1.2em;
+    float: left;
+}
+
+.product .past-price {
+    position: relative;
+    color: #979797;
+    width: auto;
+    float: left;
+    font-size: 0.8em;
+    margin-left: 0.2em;
+    margin-top: 0.4em;
+}
+
+.product .line {
+    position: absolute;
+    top: 0.5em;
+    width: 105%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.product .down-count{
+    clear: both;
+    float: right;
+    margin: 0.5em;
+}
+.product .down-count-title{
+    display: inline-block;
+}
+.product .down-count ul{
+    display:inline-block;
+    color: #fe4070;
+}
+.product .down-count li{
+    display: inline-block;
+}
+
+.product .ui-btn {
+    position: absolute;
+    width: 7em;
+    margin: 0 1em;
+    height: 2.5em;
+    line-height: 1.25em;
+    padding: 0.5em 0.2em;
+    font-size: 0.8em;
+    font-weight: 200;
+    text-shadow: none;
+    color: #fff;
+    float: right;
+    background-color: #fe4070;
+    border-radius: 8em;
+}
+
+
+/*阻止按钮点击时的样式改变*/
+
+.product .ui-btn:focus {
+    background-color: #fe4070;
+    text-shadow: none;
+    color: #fff;
+}
+
+
+/*个人中心样式*/
+
+.user-info {
+    position: relative;
+    border: 1px solid #fff;
+    margin-top: 0.8em;
+    width: 100%;
+    height: 6em;
+    background-color: #fff;
+}
+
+.user-info .img{
+    margin: 1em;
+    float: left;
+    width: 4em;
+    height: 4em;
+}
+
+.user-info img{
+    width: 4em;
+    height: 4em;
+    border-radius: 4em;
+}
+
+.user-info .user-type{
+    margin-top: 0.5em;
+    color: #fe4070;
+    font-size: 0.8em;
+}
+
+.user-info .username {
+    font-size: 1.2em;
+    padding: 0.6em 0;
+    margin: 0.6em 0;
+    height: 4em;
+    float: left;
+}
+
+.user-info .user-level{
+    height: 4em;
+    margin: 1em 0;
+    line-height: 2em;
+    width: 4em;
+    float: left;
+    margin-left: 0.5em;
+}
+
+.user-info .ui-btn{
+    position: absolute;
+    font-size: 0.8em;
+    width: 6em;
+    height: 2.5em;
+    right: 1em;
+    top: 2em;
+    padding: 0.6em 0;
+    background-color: #fe4070;
+    color: #fff;
+    border: 0;
+    font-weight: 300;
+    border-radius: 8em;
+    float: right;
+}
+.user-info .ui-btn:hover{
+    background-color: #fe4070;
+    color: #fff;
+}
+
+
+.user-items {
+    margin: 1em 0;
+    width: 100%;
+    background-color: #fff;
+}
+
+.user-items .ui-btn {
+    text-shadow: none;
+    height: 3em;
+    background-color: #fff;
+    margin: 0;
+    border: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.user-items .ui-btn:visited {
+    background-color: #fff;
+    border: 0;
+    border-bottom: 1px solid #eee;
+    margin: 0;
+    text-shadow: none;
+}
+
+.user-items li {
+    color: #000;
+    text-shadow: none;
+    font-size: 1em;
+    font-weight: 400;
+    width: 100%;
+    height: 3em;
+    text-decoration: none;
+    list-style: none;
+}
+
+.user-items .item-icon {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.user-items .icon {
+    font-size: 1.3em;
+}
+
+.user-items .item-icon {
+    float: left;
+    margin: 0 0.5em 0 1.5em;
+}
+
+.user-items .item-title {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    float: left;
+}
+
+#logoutPanel {
+    width: 50%;
+    text-align: center;
+}
+
+#logoutPanel .ui-btn {
+    border: 1px solid #fe4070;
+    background-color: #fe4070;
+    color: #fff;
+    font-weight: lighter;
+    font-family: Arial, "Microsoft YaHei", serif;
+    /*统一使用微软雅黑字体*/
+}
+
+.unslider-arrow {
+    display: none;
+}
+
+.unslider {
+    padding: 0;
+    border: none;
+}
+
+.my-slider {
+    padding: 0;
+}
+
+.my-slider ul li {
+    padding: 2px 0;
+}
+
+.my-slider img {
+    width: 100%;
+}
+
+.unslider-nav {
+    margin-top: -10px;
+}
+
+.unslider-nav ol li {
+    background-color: #ddd;
+    border: 1px solid #ddd;
+}
+
+.unslider-nav ol li.unslider-active {
+    background-color: #fe4070;
+    border: 1px solid #fe4070;
+}
+
+
+/*公共底部样式*/
+
+.ui-footer-fixed {
+    border-bottom: none !important;
+    height: 58px;
+}
+
+.ui-footer-fixed .ui-btn {
+    background-color: #fff !important;
+    border: none;
+}
+
+.ui-footer-fixed .icon-container {
+    position: relative;
+    height: 60%;
+    width: 100%;
+}
+
+.ui-footer-fixed .icon {
+    font-size: 2em;
+}
+
+.ui-footer-fixed .title {
+    position: relative;
+    font-size: 1em;
+    top: 0.3em;
+    text-shadow: none;
+    color: #919191;
+}
+
+
+/*公共底部激活菜单样式重定义*/
+
+.ui-footer-fixed .btn-choose .title,
+.ui-footer-fixed .btn-choose .icon {
+    border: none !important;
+    color: #fe4070 !important;
+    text-shadow: none !important;
+}
+
+.ui-footer-fixed .ui-block-a {
+    box-shadow: none;
+    outline: none;
+}
+
+
+/*去除默认获得焦点时的按钮样式*/
+
+
+/*
+.ui-btn:focus {
+    box-shadow: none !important;
+}
+*/
+.no-more {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    border: none !important;
+}
+
+/**/
+.not-found{
+    text-align: center;
+    margin-top: 5em;
+}
+
+.not-found .icon{
+    font-size: 5em;
+    color: #fe4070;
+}
+
+.not-found .not-title{
+    margin: 2em 0;
+    font-size: 1.1em;
+}

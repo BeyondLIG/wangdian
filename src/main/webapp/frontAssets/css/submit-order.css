@@ -1,0 +1,161 @@
+.ui-page{
+    background-color: #fff;
+}
+
+.fixed-header{
+    text-align: center;
+}
+
+.ui-content{
+    top: 50px;
+    padding: 0.5em 0 3.5em 0;
+}
+
+.ui-select .ui-btn{
+    border: 0 !important;
+    border-radius: 0 !important;
+}
+
+.address-name{
+    margin: 1em !important;
+}
+
+#submitOrderBtn{
+    position: fixed;
+    width: 100%;
+    height: 3em;
+    bottom: 0;
+    margin: 0;
+    z-index: 99;
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    text-shadow: none;
+    font-weight: 300 !important;
+    cursor:not-allowed;
+}
+.available{
+    background-color: #fe4070 !important;
+    cursor: pointer !important;
+}
+.available:focus{
+    background-color: #fe4070 !important;
+    color: #fff;
+    text-shadow: none;
+    border: none;
+}
+
+#submitOrderBtn:focus{
+    background-color: #ccc;
+    color: #fff;
+    text-shadow: none;
+    border: none;
+}
+
+.ui-controlgroup,
+.ui-field-contain{
+    padding: 0 !important;
+}
+
+.order-info{
+    padding: 5px 10px;
+    background-color: #F5F5F5;
+    margin-top: 10px;
+}
+
+.order-info .product-info>div{
+    margin: 0.3em 0;
+}
+
+.order-info img{
+    float: left;
+    width: 5em;
+    height: 5em;
+    margin-right: 10px;
+}
+
+.order-info .name{
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bolder;
+    max-height: 40px;
+    overflow: hidden;
+}
+.order-info .parameter{
+    color: #666;
+    /*
+    max-height: 30px;
+    */
+    overflow: hidden;
+}
+.order-info .price{
+    color: #666;
+    overflow: hidden;
+}
+
+.buy-count{
+    margin-top: 1em;
+    clear: both;
+    height: 3em;
+}
+
+.buy-count label{
+    display: inline-block;
+}
+/*
+.buy-count .ui-input-text{
+    padding: 0 !important;
+    border: none;
+    box-shadow: none;
+    width: 50px;
+    font-weight: bolder !important;
+    text-align: center !important;
+}
+*/
+.buy-count .ui-btn{
+    display: inline-block;
+    width: 3em;
+    height: 2em;
+    padding: 0 !important;
+    margin: 0.5em 1em;
+}
+
+.buy-count span{
+    width: 50px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+.no-address{
+    background-color: #eee;
+    padding: 10px;
+}
+.no-address a{
+    text-decoration: none;
+}
+
+.remark{
+    padding: 10px;
+}
+.remark .ui-input-text{
+    border-radius: 0;
+    height: 5em !important;
+    text-align: left;
+}
+
+.order-price{
+    border-top: 1px solid #ccc;
+    padding: 1em 0;
+    text-align: left;
+}
+
+.order-price .order-price-inner{
+    color: #fe4070;
+    float: right;    
+    width: 12em;
+}
+
+.order-price .order-price-inner>div{
+    margin: 0.5em 1em;
+}
