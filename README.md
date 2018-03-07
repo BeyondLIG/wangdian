@@ -1,3 +1,2 @@
 # wangdian
-An e-shop
-An outsource project.
+店小二1电商项目
